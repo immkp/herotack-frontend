@@ -18,6 +18,7 @@ function App() {
       const response = await axios.post('https://heroteck-backend.onrender.com/submit-form', formData);
       if (response.data.success) {
         alert('Form submitted successfully!');
+        console.log(formData)
         setFormData({ name: '', email: '', phone: '' });
       } else {
         alert('Form submission failed. Please try again later.');

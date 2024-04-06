@@ -15,7 +15,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5001/submit-form', formData);
+      const response = await axios.post('https://heroteck-backend.onrender.com/submit-form', formData);
       if (response.data.success) {
         alert('Form submitted successfully!');
         setFormData({ name: '', email: '', phone: '' });
